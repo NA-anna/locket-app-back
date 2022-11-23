@@ -9,19 +9,20 @@ const UserSchema = new mongoose.Schema({
     loginPw : String,
     name    : String,
     tel     : String,
+    email   : String,
     favorites: { 
-        markets: [ 
+        fav_fleamarkets: [ 
             {
-                id: String,
+                market_id: String,
                 location : {
                     type       : {type: String, default: "Point"},
                     coordinates: [Number]
                 }
             } 
         ],
-        fivemarkets: [ 
+        fav_fivemarkets: [ 
             {
-                name: String,
+                market_name: String,
                 location : {
                     type       : {type: String, default: "Point"},
                     coordinates: [Number]
