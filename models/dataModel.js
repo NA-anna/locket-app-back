@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import validator from "validator";  // ex 이메일주소
 
 /*------------------------------*/
-// "users" 스키마 생성
+// "users" 스키마 생성  tt
 /*------------------------------*/
 const UserSchema = new mongoose.Schema({
     id     : String,
