@@ -7,7 +7,7 @@ const sampleMarkets = [
         "name"           : "한강달빛야시장",
         "category"       : "ct002", //야시장
         "place"          : "반포",
-        "location": { "type"       : "Pointer", 
+        "location": { "type"       : "Point", 
                       "coordinates": [ 37.5103503, 126.9059344 ]
         },
         "startdate"     : "2022-10-22",
@@ -30,7 +30,7 @@ const sampleMarkets = [
         "name"           : "국민 플리마켓",
         "category"       : "ct001", //"플리마켓"
         "place"          : "뚝섬한강공원",
-        "location": { "type"       : "Pointer", 
+        "location": { "type"       : "Point", 
                       "coordinates": [ 37.5292974433415, 127.06892112991 ]
         },
         "startdate"     : "2022-11-19",
@@ -49,7 +49,7 @@ const sampleMarketsForPost = [
         "name": "스타크플리마켓",
         "category": "ct001", //"플리마켓"
         "place": "반포",
-        "location": { "type": "Pointer", 
+        "location": { "type": "Point", 
                     "coordinates": [ 37.5103503, 126.9059344 ]
         },
         "startdate": "2022-10-22",

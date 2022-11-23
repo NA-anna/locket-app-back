@@ -1,9 +1,24 @@
 import { User } from '../models/dataModel.js';
-
+import { sampleUsers } from '../models/sampleUsers.js';
 
 /*------------------------------*/
 // users
 /*------------------------------*/
+
+// INITITIATE
+const init = async(req, res) => {
+    
+    try {
+        await User.deleteMany({});
+        await User.insertMany( sampleUsers )
+        console.log(sampleUsers)
+        res.status(204).send()
+    }catch(e) {
+        res.status(500).json({
+            message: "저장 실패"
+        })
+    }
+}
 
 //GET
 const findAll = async(req, res) => {  
@@ -33,6 +48,7 @@ const create = async(req, res) => {
 //GET (by id)
 const findOne = async(req, res) => {  
     const id = req.params.id
+    //const pw = req.params.pw
     try{
         const data = await User.findOne({id: id});      
 
@@ -108,4 +124,4 @@ const deleteOne = async(req, res) => {
 
 
 // 내보내기
-export { findAll , create, findOne, updateOne, deleteOne } 
+export { init, findAll , create, findOne, updateOne, deleteOne } 
