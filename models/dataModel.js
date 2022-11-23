@@ -8,6 +8,7 @@ const UserSchema = new mongoose.Schema({
     id     : String,
     loginPw : String,
     name    : String,
+    profile : String,
     tel     : String,
     email   : String,
     favorites: { 
@@ -16,7 +17,7 @@ const UserSchema = new mongoose.Schema({
                 market_id: String,
                 location : {
                     type       : {type: String, default: "Point"},
-                    coordinates: [Number]
+                    coordinates: {type: [Number], index: '2dsphere'} 
                 }
             } 
         ],
@@ -25,7 +26,7 @@ const UserSchema = new mongoose.Schema({
                 market_name: String,
                 location : {
                     type       : {type: String, default: "Point"},
-                    coordinates: [Number]
+                    coordinates: {type: [Number], index: '2dsphere'} 
                 }
             } 
         ]
