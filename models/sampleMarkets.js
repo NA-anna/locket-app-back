@@ -67,4 +67,4 @@ const sampleMarketsForPost = [
     }
 ]
 
-export { sampleMarkets }
+export { sampleMarkets }  

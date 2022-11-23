@@ -1,19 +1,41 @@
 import mongoose from "mongoose";
 import validator from "validator";  // ex 이메일주소
 
+/*------------------------------*/
 // "users" 스키마 생성
+/*------------------------------*/
 const UserSchema = new mongoose.Schema({
     id     : String,
     loginPw : String,
     name    : String,
     tel     : String,
-    favorite: [String]
+    favorites: { 
+        markets: [ 
+            {
+                id: String,
+                location : {
+                    type       : {type: String, default: "Point"},
+                    coordinates: [Number]
+                }
+            } 
+        ],
+        fivemarkets: [ 
+            {
+                name: String,
+                location : {
+                    type       : {type: String, default: "Point"},
+                    coordinates: [Number]
+                }
+            } 
+        ]
+    }
 })
 
 const User = mongoose.model("users", UserSchema) 
 
-
+/*------------------------------*/
 // "businessusers" 스키마 생성
+/*------------------------------*/
 const BusinessuserSchema = new mongoose.Schema({
     id        : String,
     loginPw   : String,
@@ -25,8 +47,9 @@ const BusinessuserSchema = new mongoose.Schema({
 const Businessuser = mongoose.model("businessusers", BusinessuserSchema) 
 
 
-
+/*------------------------------*/
 // "markets" 스키마 생성
+/*------------------------------*/
 const MarketSchema = new mongoose.Schema({
     _id            : String,
     businessusersId: String,
@@ -65,7 +88,9 @@ MarketSchema.index({ location: "2dsphere" })
 const Market = mongoose.model("markets", MarketSchema) 
 
 
+/*------------------------------*/
 // "sellers" 스키마 생성
+/*------------------------------*/
 const SellerSchema = new mongoose.Schema({
     _id        : String,
     userId     : String,
