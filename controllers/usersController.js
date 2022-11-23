@@ -2,7 +2,7 @@ import { User } from '../models/dataModel.js';
 import { sampleUsers } from '../models/sampleUsers.js';
 
 /*------------------------------*/
-// users  tt
+// users  
 /*------------------------------*/
 
 // INITITIATE

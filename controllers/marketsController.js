@@ -1,5 +1,5 @@
 import { Market } from '../models/dataModel.js';
-import { sampleMarkets } from '../models/sampleData.js';
+import { sampleMarkets } from '../models/sampleMarkets.js';
 import {v4 as uuidv4} from 'uuid';
 
 /*------------------------------*/
