@@ -40,6 +40,7 @@ app.get('/', (req,res) =>{
 /*------------------------------*/
 // users
 /*------------------------------*/
+app.post("/users-init", users.init); 
 app.get("/users", users.findAll);
 app.post("/users", users.create);
 app.get("/users/:id", users.findOne);
