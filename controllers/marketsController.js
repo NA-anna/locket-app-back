@@ -53,9 +53,9 @@ const create = async(req, res) => {
 const findSome = async(req, res) => {  
     const param = req.params.category
     try{
-        const data = await Market.find({ category: param});      
+        const data = await Market.find({ category: param });      
         if (!data) {
-            return res.status(404).send()
+            return res.status(404).send()  //???여기 테스트 필요함
         }
         res.status(200).send(data);
     }catch(e) {
@@ -65,6 +65,23 @@ const findSome = async(req, res) => {
     }
 }
 
+//GET 모집중 (needSellers = true- sellersForm - deadline > today)
+const findUnderGathering = async(req, res) => {  
+    const today = new Date()
+    try{
+        console.log(today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate() )
+        const data = await Market.find({ needSellers: true,
+                                         sellersForm: { deadline : {$gt:today} } });   //{$gt:10 , $lt:29}    
+        if (!data) {
+            return res.status(404).send(documents)
+        }
+        res.status(200).send(data);
+    }catch(e) {
+        res.status(500).json({
+            "message": "user 조회 실패"
+        })      
+    }   
+}
 
 // 내보내기
-export { init, findAll, create, findSome }
+export { init, findAll, create, findSome, findUnderGathering }

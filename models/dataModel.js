@@ -65,7 +65,7 @@ const MarketSchema = new mongoose.Schema({
     },
     startdate     : String,
     enddate       : String,
-    site          : { type: String, validate(value){ 
+    site          : { type: String , validate(value){ 
                                         if(!validator.isURL(value)){
                                             throw new Error("URL is invalid")
                                         } 

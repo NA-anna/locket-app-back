@@ -62,6 +62,7 @@ app.post("/markets", markets.create);
 app.get("/markets/:category", markets.findSome);  
 // 장날보기
 // 모집중
+app.get("/markets-undergathering", markets.findUnderGathering); 
 // 지도좌표
 
 /*------------------------------*/
