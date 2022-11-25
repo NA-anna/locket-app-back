@@ -31,6 +31,23 @@ const create = async(req, res) => {
     }
 }
 
+//GET (by id)
+const findOne = async(req, res) => {  
+    const id = req.params.id
+    //const pw = req.params.pw
+    try{
+        const data = await Businessuser.findOne({id: id});      
+
+        if (!data) {
+            return res.status(404).send()
+        }
+        res.status(200).send(data);
+    }catch(e) {
+        res.status(500).json({
+            "message": "businessusers 조회 실패"
+        })      
+    }
+}
 
 // 내보내기
-export { findAll, create }
+export { findAll, create, findOne }

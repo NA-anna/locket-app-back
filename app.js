@@ -52,6 +52,7 @@ app.delete("/users/:id", users.deleteOne);
 /*------------------------------*/
 app.get("/businessusers", businessusers.findAll);
 app.post("/businessusers", businessusers.create);
+app.get("/businessusers/:id", businessusers.findOne);
 
 /*------------------------------*/
 // markets
