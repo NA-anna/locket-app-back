@@ -31,8 +31,25 @@ const create = async(req, res) => {
     }
 }
 
+//GET (by userid)
+const findSome = async(req, res) => {  
+    const param = req.params.userid
+    console.log(param)
+    try{
+        const data = await Seller.find({ userId: param });    
+        const documents = { documents: data }  
+        if (!data) {
+            return res.status(404).send()  
+        }
+        res.status(200).send(documents);
+    }catch(e) {
+        res.status(500).json({
+            "message": "user 조회 실패"
+        })      
+    }
+}
 
 
 
 // 내보내기
-export {findAll, create}
+export {findAll, create, findSome}

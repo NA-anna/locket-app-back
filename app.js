@@ -71,6 +71,7 @@ app.get("/markets-undergathering", markets.findUnderGathering);
 /*------------------------------*/
 app.get("/sellers", sellers.findAll);
 app.post("/sellers", sellers.create);
+app.get("/sellers/:userid", sellers.findSome);
 
 
 

@@ -41,7 +41,7 @@ const create = async(req, res) => {
     try {
         await Market.create({_id: uuidv4(), ...req.body})
         //await data.save()
-        res.status(204).send()
+        res.status(204).send() //???여기 테스트 필요함
     }catch(e) {
         res.status(500).json({
             message: "저장 실패"
@@ -55,7 +55,7 @@ const findSome = async(req, res) => {
     try{
         const data = await Market.find({ category: param });      
         if (!data) {
-            return res.status(404).send()  //???여기 테스트 필요함
+            return res.status(404).send()  
         }
         res.status(200).send(data);
     }catch(e) {
@@ -69,7 +69,7 @@ const findSome = async(req, res) => {
 const findUnderGathering = async(req, res) => {  
     const today = new Date()
     try{
-        console.log(today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate() )
+        //console.log(today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate() )
         const data = await Market.find({ needSellers: true,
                                          sellersForm: { deadline : {$gt:today} } });   //{$gt:10 , $lt:29}    
         if (!data) {

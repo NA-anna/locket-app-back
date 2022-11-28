@@ -48,7 +48,7 @@ const create = async(req, res) => {
 //GET (by id)
 const findOne = async(req, res) => {  
     const id = req.params.id
-    //const pw = req.params.pw
+    console.log(req.query)
     try{
         const data = await User.findOne({id: id});      
 
