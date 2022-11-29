@@ -111,3 +111,4 @@ const Seller = mongoose.model("sellers", SellerSchema)
 
 //내보내기
 export { User, Businessuser, Market, Seller }
+  
