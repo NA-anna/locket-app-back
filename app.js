@@ -7,7 +7,7 @@ import express from 'express';
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
-const port = process.env.port || 3000
+const port = process.env.port || 8080
 app.listen(port, ()=>{
     console.log(`동작중... please, open your browser at http://localhost:${port} `)
 });

@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/190446ab-e23d-4bc0-a16a-350bd7801a3e/AppServices/subscriptions/190446ab-e23d-4bc0-a16a-350bd7801a3e/resourceGroups/rg-market/providers/Microsoft.Web/sites/marketapi",
+    "appService.deploySubpath": "."
+}
