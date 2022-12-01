@@ -72,6 +72,7 @@ const MarketSchema = new mongoose.Schema({
                                     } 
                     },
     description   : String,
+    photo         : [String],
     isPromotional : Boolean,
     needSellers: Boolean,
     sellersForm: {
