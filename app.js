@@ -60,7 +60,7 @@ app.get("/businessusers/:id", businessusers.findOne);
 app.post("/markets-init", markets.init); 
 app.get("/markets", markets.findAll);
 app.post("/markets", markets.create);             
-app.get("/markets/:category", markets.findSome);  
+app.get("/markets/:businessusersId", markets.findSome);  
 // 장날보기
 // 모집중
 app.get("/markets-undergathering", markets.findUnderGathering); 

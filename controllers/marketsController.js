@@ -49,18 +49,18 @@ const create = async(req, res) => {
     }
 }
 
-//GET (by category)
+//GET (by businessusersId)
 const findSome = async(req, res) => {  
-    const param = req.params.category
+    const param = req.params.businessusersId
     try{
-        const data = await Market.find({ category: param });      
+        const data = await Market.find({ businessusersId: param });      
         if (!data) {
             return res.status(404).send()  
         }
         res.status(200).send(data);
     }catch(e) {
         res.status(500).json({
-            "message": "user 조회 실패"
+            "message": "market 조회 실패"
         })      
     }
 }
@@ -78,7 +78,7 @@ const findUnderGathering = async(req, res) => {
         res.status(200).send(data);
     }catch(e) {
         res.status(500).json({
-            "message": "user 조회 실패"
+            "message": "market 조회 실패"
         })      
     }   
 }
