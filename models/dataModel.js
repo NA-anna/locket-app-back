@@ -82,7 +82,7 @@ const MarketSchema = new mongoose.Schema({
             type: [String],
             default: undefined, // default: () => { return null },
           },      //[“음식”, “의류”, “소품”, “수제”]
-        charge         : String,
+        //charge         : String,
         description    : String
     }
 })

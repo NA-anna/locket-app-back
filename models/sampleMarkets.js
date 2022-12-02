@@ -20,32 +20,32 @@ const sampleMarkets = [
             "sellersCount": 20,
             "deadline"       : "2022-10-03 18:00",
             "needCategory"   : ["ALL"], //[“음식”, “의류”, “소품”, “수제”]
-            "charge"         : "30000",
+            //"charge"         : "30000",
             "description"    : "셀러모집합니다!"
         }
     },
     {
-    "_id"            : uuidv4(),
-    "businessusersId": "iseoulu",
-    "name"           : "한강달빛야시장",
-    "category"       : "야시장", 
-    "place"          : "여의도",
-    "location": { "type"       : "Point", 
-                  "coordinates": [ 37.5103513, 126.9059344 ]
-    },
-    "startdate"     : "2022-12-01",
-    "enddate"       : "2022-12-31",
-    //"site"          : "", //"http://www.bamdokkaebi.org/",
-    "description"   : "기간 중 매주 토, 일 (구)밤도깨비야시장 으로 놀러오세요",
-    "isPromotional" : true,
-    "needSellers"   : true,
-    "sellersForm"   : {
-        "sellersCount": 20,
-        "deadline"       : "2022-11-30 18:00",
-        "needCategory"   : ["음식", "소품", "수제"],
-        "charge"         : "30000",
-        "description"    : "셀러모집합니다!"    
-        }
+        "_id"            : uuidv4(),
+        "businessusersId": "iseoulu",
+        "name"           : "한강달빛야시장",
+        "category"       : "야시장", 
+        "place"          : "여의도",
+        "location": { "type"       : "Point", 
+                    "coordinates": [ 37.5103513, 126.9059344 ]
+        },
+        "startdate"     : "2022-12-01",
+        "enddate"       : "2022-12-31",
+        //"site"          : "", //"http://www.bamdokkaebi.org/",
+        "description"   : "기간 중 매주 토, 일 (구)밤도깨비야시장 으로 놀러오세요",
+        "isPromotional" : true,
+        "needSellers"   : true,
+        "sellersForm"   : {
+            "sellersCount": 20,
+            "deadline"       : "2022-11-30 18:00",
+            "needCategory"   : ["음식", "소품", "수제"],
+            //"charge"         : "30000",
+            "description"    : "셀러모집합니다!"    
+            }
     },
     {
         "_id"            : uuidv4(),
@@ -85,7 +85,7 @@ const sampleMarketsForPost = [
             "sellersCount": 20,
             "deadline": "2022-10-03 18:00",
             "needCategory": ["음식", "의류", "소품", "수제"],
-            "charge": 30000,
+            //"charge": 30000,
             "description": "셀러모집합니다!"
         }
     }
