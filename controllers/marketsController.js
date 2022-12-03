@@ -48,7 +48,7 @@ const create = async(req, res) => {
         })
     }
 }
-
+ 
 //GET (by businessusersId)
 const findSome = async(req, res) => {  
     const param = req.params.businessusersId
