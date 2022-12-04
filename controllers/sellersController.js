@@ -69,7 +69,7 @@ const findByMarket = async(req, res) => {
 const updateOne = async(req, res) => {  
     const id = req.params.id
     try{
-        const data = await User.findOneAndUpdate({_id: id}, req.body, {
+        const data = await Seller.findOneAndUpdate({_id: id}, req.body, {
             new: true,
             runValidators: true
         });     
