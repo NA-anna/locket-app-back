@@ -62,8 +62,7 @@ app.get("/markets", markets.findAll);
 app.post("/markets", markets.create);             
 app.get("/markets/:businessusersId", markets.findSome);  
 // 장날보기
-// 모집중
-app.get("/markets-undergathering", markets.findUnderGathering); 
+app.get("/markets-undergathering", markets.findUnderGathering); // 모집중
 // 지도좌표
 
 /*------------------------------*/
@@ -71,7 +70,8 @@ app.get("/markets-undergathering", markets.findUnderGathering);
 /*------------------------------*/
 app.get("/sellers", sellers.findAll);
 app.post("/sellers", sellers.create);
-app.get("/sellers/:userid", sellers.findSome);
+app.get("/sellers-byUser/:userId", sellers.findByUser);
+app.get("/sellers-byMarket/:marketId", sellers.findByMarket);
 
 
 
