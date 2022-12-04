@@ -65,6 +65,24 @@ const findByMarket = async(req, res) => {
     }
 }
 
+// PUT (by id)   
+const updateOne = async(req, res) => {  
+    const id = req.params.id
+    try{
+        const data = await User.findOneAndUpdate({_id: id}, req.body, {
+            new: true,
+            runValidators: true
+        });     
 
+        if (!data) {
+            return res.status(404).send()
+        }
+        res.status(200).send(data);
+    }catch(e) {
+        res.status(500).json({
+            "message": "변경 실패"
+        })      
+    }
+}
 // 내보내기
-export {findAll, create, findByUser, findByMarket}
+export {findAll, create, findByUser, findByMarket, updateOne}

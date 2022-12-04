@@ -44,7 +44,7 @@ app.post("/users-init", users.init);
 app.get("/users", users.findAll);
 app.post("/users", users.create);
 app.get("/users/:id", users.findOne);
-app.put("/users/:id", users.updateOne);    //X
+app.put("/users/:id", users.updateOne);
 app.delete("/users/:id", users.deleteOne);
 
 /*------------------------------*/
@@ -72,7 +72,7 @@ app.get("/sellers", sellers.findAll);
 app.post("/sellers", sellers.create);
 app.get("/sellers-byUser/:userId", sellers.findByUser);
 app.get("/sellers-byMarket/:marketId", sellers.findByMarket);
-
+app.put("/sellers/:id", sellers.updateOne);
 
 
 
