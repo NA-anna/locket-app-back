@@ -1,4 +1,4 @@
 # locket-app
 
-- locket app 의 백엔드 프로젝트
-- node.js, mongoDB 로 이루어져 있습니다
+- locket app 의 BackEnd project
+- developed by node.js with mongoDB 
